@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--About-->
+    <PreferenceCategory
+        android:title="@string/em_pref_about">
+        <Preference
+            android:id="@+id/preference"
+            android:key="@string/em_pref_key_about"
+            android:title="@string/em_pref_about_version"/>
+    </PreferenceCategory>
+
+    <!-- Notifications -->
+    <PreferenceCategory
+        android:title="@string/em_pref_notification">
+        <Preference
+            android:fragment="com.jinanzhuan.preference.NotificationPreference"
+            android:key="@string/em_pref_notification"
+            android:summary="@string/em_pref_notification_summary"
+            android:title="@string/em_pref_notification"/>
+    </PreferenceCategory>
+
+    <!--Chat&Call-->
+    <PreferenceCategory
+        android:title="@string/em_pref_chat_call">
+        <Preference
+            android:fragment="com.jinanzhuan.preference.ChatPreference"
+            android:key="chat_call_screen"
+            android:summary="@string/em_pref_chat_call_summary"
+            android:title="@string/em_pref_chat_call"
+            >
+            <extra
+                android:name="name"
+                android:value="Som"/>
+            <extra
+                android:name="age"
+                android:value="24"/>
+        </Preference>
+    </PreferenceCategory>
+
+    <!--Account-->
+    <PreferenceCategory
+        android:title="Account">
+        <PreferenceScreen
+            android:key="account"
+            android:summary="show account info"
+            android:title="Account">
+            <intent
+                android:action="android.intent.action.MAIN"
+                android:targetClass="com.hyphenate.chatuidemo.settings.AccountActivity"
+                android:targetPackage="com.hyphenate.chatuidemo"/>
+        </PreferenceScreen>
+    </PreferenceCategory>
+</PreferenceScreen>
